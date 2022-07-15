@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Tabs</title>
+</head>
+<body>
+  <div class="mytabs">
+    <input type="radio" id="tabcss" name="mytabs" checked="checked">
+    <label for="tabcss">css</label>
+    <div class="tab">
+      <h2>css</h2>
+      <p>CSS stands for Cascading Style Sheets. It is the language for describing the presentation of Web pages,
+        including colours, layout, and fonts, thus making our web pages presentable to the users</p>
+    </div>
+
+    <input type="radio" id="tabWeb" name="mytabs">
+    <label for="tabWeb">web</label>
+    <div class="tab">
+      <h2>web browser</h2>
+      <p>A web browser, which is commonly known as a browser, is a program that displays text, data, pictures, videos, animation, and more. It provides a software interface that allows you to click hyperlinked resources on the World Wide Web. When you double click the Browser icon installed on your computer to launch it, you get connected to the World Wide Web and can search Google or type a URL into the address bar.
+      </p>
+    </div>
+
+    <input type="radio" id="tabhtml" name="mytabs">
+    <label for="tabhtml">html</label>
+    <div class="tab">
+      <h2>HTML</h2>
+      <p>HTML [stands for( Hypertext Markup Language)] is a computer language that makes up most web pages
+        and online applications. A hypertext is a text that is used to reference other pieces of text, while a
+        markup language is a series of markings that tells web servers the style and structure of a document. </p>
+
+      <p>CSS stands for Cascading Style Sheets. It is the language for describing the presentation of Web pages,
+        including colours, layout, and fonts, thus making our web pages presentable to the users..</p>
+    </div>
+
+  </div>
+</body>
+</html>
+
+<style>
+  body {
+    background: #ccc;
+    font-family: 'Roboto', sans-serif;
+}
+.mytabs {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 25px;
+}
+.mytabs input[type="radio"] {
+    display: none;
+}
+.mytabs label {
+    padding: 25px;
+    background: #e2e2e2;
+    font-weight: bold;
+}
+
+.mytabs .tab {
+    width: 100%;
+    padding: 20px;
+    background: #fff;
+    order: 1;
+    display: none;
+}
+.mytabs .tab h2 {
+    font-size: 3em;
+}
+
+.mytabs input[type='radio']:checked + label + .tab {
+    display: block;
+}
+
+.mytabs input[type="radio"]:checked + label {
+    background: #fff;
+}
+</style>
